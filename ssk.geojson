@@ -1,0 +1,834 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.9697541,
+          25.2443352
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Bhagalpur City",
+        "state": "Bihar",
+        "district": "Bhagalpur",
+        "accuracy": "exact",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.9825139,
+          25.1162147
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Jagdishpur Bhagalpur",
+        "state": "Bihar",
+        "district": "Bhagalpur",
+        "accuracy": "exact",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.5847982,
+          25.2769717
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Bariarpur",
+        "state": "Bihar",
+        "district": "Munger",
+        "accuracy": "exact",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.5677329,
+          25.5366246
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Katihar",
+        "state": "Bihar",
+        "district": "Katihar",
+        "accuracy": "exact",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.4763538,
+          25.3789577
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Munger",
+        "state": "Bihar",
+        "district": "Munger",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Munger/@25.3789577,86.4001361,13z/data=!4m10!1m2!2m1!1sSEWA+Shakti+Kendra+Munger!3m6!1s0x39f1ef6de022dae9:0xe7102a2a5df1c37a!8m2!3d25.3789577!4d86.4763538!15sChlTRVdBIFNoYWt0aSBLZW5kcmEgTXVuZ2VykgEXbm9uX3Byb2ZpdF9vcmdhbml6YXRpb26qAWgKDS9nLzExbDcycDJwbHgQASoWIhJzZXdhIHNoYWt0aSBrZW5kcmEoADIeEAEiGoGA7Uzk0TRAckOUxq03a8nwGJiw9Mmo5hS7Mh0QAiIZc2V3YSBzaGFrdGkga2VuZHJhIG11bmdlcuABAA!16s%2Fg%2F11l72p2plx?entry=ttu",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.5492731,
+          25.1274792
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Kharagpur Munger",
+        "state": "Bihar",
+        "district": "Munger",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Kharagpur+Munger/@25.127484,86.5466982,17z/data=!3m1!4b1!4m6!3m5!1s0x39f1970094cf9c8f:0x8a3134fe6930038c!8m2!3d25.1274792!4d86.5492731!16s%2Fg%2F11q96kg5lf?entry=ttu",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.6718381,
+          26.1682424
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra (SSK) Basantpur",
+        "state": "Bihar",
+        "district": "Siwan",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+(SSK)+Basantpur/@26.1682472,84.6692632,17z/data=!3m1!4b1!4m6!3m5!1s0x3992dd005601ad9f:0x664d1873e20a3377!8m2!3d26.1682424!4d84.6718381!16s%2Fg%2F11x6ys7pwd?entry=ttu",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3170837,
+          28.6938589
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Sunder Nagri",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Sunder+Nagri/@28.6938636,77.3145088,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfb0b488cebc3:0x110c9c0eda715e25!8m2!3d28.6938589!4d77.3170837!16s%2Fg%2F11pts9rrgs?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2742674,
+          28.7106958
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Mustafabad",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Mustafabad/@28.7107004,77.2693965,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfdb6ca69445d:0x7052473e31944db5!8m2!3d28.7106958!4d77.2742674!16s%2Fg%2F11spmx_p04?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3128454,
+          28.6952172
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Nand Nagri",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Nand+Nagri/@28.6952219,77.3102705,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfb639bd22823:0x78c2d529d89c790c!8m2!3d28.6952172!4d77.3128454!16s%2Fg%2F11sh640l8h?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3093426,
+          28.5980177
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra New Ashok Nagar",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+New+Ashok+Nagar/@28.5980224,77.3067677,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce5179b10d2a1:0x2494b054b5cfb0c0!8m2!3d28.5980177!4d77.3093426!16s%2Fg%2F11qmrj22y2?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1695162,
+          28.7258436
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Jahangirpuri",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Jahangirpuri/@28.7258483,77.1669413,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0140e714138f:0x6958c0afd5f09922!8m2!3d28.7258436!4d77.1695162!16s%2Fg%2F11f714kdf2?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1577886,
+          28.745387
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Bhalaswa",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Bhalaswa/@28.7453917,77.1552137,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0105c09157cb:0x32a12b038bc10ee3!8m2!3d28.745387!4d77.1577886!16s%2Fg%2F11l35l6llb?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2766528,
+          28.5444139
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Harkesh Nagar",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Harkesh+Nagar/@28.5444186,77.2740779,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce3d262542bd7:0xe322c62345d03d64!8m2!3d28.5444139!4d77.2766528!16s%2Fg%2F11k4xwm48p?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.251788,
+          28.7095425
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Rajiv Nagar",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Rajiv+Nagar/@28.7095471,77.2469171,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd43b7d780b9:0xaee5bb30c21d954e!8m2!3d28.7095425!4d77.251788!16s%2Fg%2F11q9m8w929?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1115782,
+          28.6543972
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Raghubir Nagar",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Raghubir+Nagar/@28.6544019,77.1090033,17z/data=!3m1!4b1!4m6!3m5!1s0x390d032a82d16fb3:0x6d81e00f791e94ca!8m2!3d28.6543972!4d77.1115782!16s%2Fg%2F11rnf0sy48?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.282556,
+          28.6251389
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Sangam Vihar",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Sangam+Vihar/@28.6251436,77.2799811,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce31a834f7803:0xc8d082e7b99d06f3!8m2!3d28.6251389!4d77.282556!16s%2Fg%2F11lnj911d2?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.329412,
+          28.6880824
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Seemapuri",
+        "state": "Delhi",
+        "district": "Delhi",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Seemapuri/@28.6880871,77.3268371,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfbde490c649d:0xbb76a9d73e60d992!8m2!3d28.6880824!4d77.329412!16s%2Fg%2F11wh_41b1d?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.1689064,
+          30.8071812
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Moga",
+        "state": "Punjab",
+        "district": "Moga",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Moga/@30.8071858,75.1663315,17z/data=!3m1!4b1!4m6!3m5!1s0x391a097e6933240d:0xed94c4ea27a6d6a4!8m2!3d30.8071812!4d75.1689064!16s%2Fg%2F11y3kckpxb?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.8989322,
+          30.5209113
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Malerkotla",
+        "state": "Punjab",
+        "district": "Malerkotla",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Malerkotla/@30.5209159,75.8963573,17z/data=!3m1!4b1!4m6!3m5!1s0x3910675bedb5f32b:0x4630df14ac2c03b9!8m2!3d30.5209113!4d75.8989322!16s%2Fg%2F11y3kbk5zn?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.142449,
+          30.3688446
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Nabha",
+        "state": "Punjab",
+        "district": "Nabha",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Nabha/@30.3688492,76.1398741,17z/data=!3m1!4b1!4m6!3m5!1s0x391039e139952ff1:0x47104d831f109e1e!8m2!3d30.3688446!4d76.142449!16s%2Fg%2F11y33530df?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3638381,
+          30.1578416
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Sanour",
+        "state": "Punjab",
+        "district": "Sanour",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Sanour/@30.1578462,76.3612632,17z/data=!3m1!4b1!4m6!3m5!1s0x3911d5328ba98005:0xdb1cf09988ae63ab!8m2!3d30.1578416!4d76.3638381!16s%2Fg%2F11vwhnl_6s?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6325367,
+          30.9457059
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Firozpur",
+        "state": "Punjab",
+        "district": "Firozpur",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Firozpur/@30.9457105,74.6299618,17z/data=!3m1!4b1!4m6!3m5!1s0x3919e9570517fe9f:0x710ae1bef8c55b3f!8m2!3d30.9457059!4d74.6325367!16s%2Fg%2F11pt_2g_ks?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.3988605,
+          32.0338077
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra , Gurdaspur- Punjab",
+        "state": "Punjab",
+        "district": "Punjab",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+,+Gurdaspur-+Punjab/@32.0338122,75.3962856,17z/data=!3m1!4b1!4m6!3m5!1s0x391b93a65a0d0569:0x44a3fe3738df7bb3!8m2!3d32.0338077!4d75.3988605!16s%2Fg%2F11rp20452t?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.809427,
+          26.9384457
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Bandha Basti",
+        "state": "Rajasthan",
+        "district": "Jaipur",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Bandha+Basti/@26.9384504,75.8045561,17z/data=!3m1!4b1!4m6!3m5!1s0x396db17ae007be27:0x9eadc03405188050!8m2!3d26.9384457!4d75.809427!16s%2Fg%2F11vqmzq0ng?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.8031121,
+          26.9511574
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Bhatta Basti",
+        "state": "Rajasthan",
+        "district": "Jaipur",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Bhatta+Basti/@26.9512324,75.7840577,15z/data=!4m10!1m2!2m1!1sSewa+Shakti+Kendra+Bhatta+Basti+!3m6!1s0x396db3bdb4056305:0x6fa012a6cf826a3e!8m2!3d26.9511574!4d75.8031121!15sCh9TZXdhIFNoYWt0aSBLZW5kcmEgQmhhdHRhIEJhc3RpkgEXbm9uX3Byb2ZpdF9vcmdhbml6YXRpb26qAVcKDS9nLzExdnNudmNtcjgQATIfEAEiG0r4wUEtQBTlDp0-jj6v7MRl9JqmPx6CzywUxDIjEAIiH3Nld2Egc2hha3RpIGtlbmRyYSBiaGF0dGEgYmFzdGngAQA!16s%2Fg%2F11vsnvcmr8?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.8503335,
+          26.919349
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Galta",
+        "state": "Rajasthan",
+        "district": "Jaipur",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Galta/@26.9193538,75.8477586,17z/data=!3m1!4b1!4m6!3m5!1s0x396db7eb31837b2b:0x46d3bbcdb6cef3ba!8m2!3d26.919349!4d75.8503335!16s%2Fg%2F11vstvk_hy?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.5215251,
+          23.9016452
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra, Churchu , Hazaribagh",
+        "state": "Jharkhand",
+        "district": "Hazaribagh",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra,+Churchu+,+Hazaribagh/@23.90165,85.5166542,17z/data=!3m1!4b1!4m6!3m5!1s0x39f4872555dc1603:0xa0615341c3b76220!8m2!3d23.9016452!4d85.5215251!16s%2Fg%2F11rn0kw8z7?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.4964314,
+          24.0078923
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra, Daru",
+        "state": "Jharkhand",
+        "district": "Hazaribagh",
+        "accuracy": "exact",
+        "link": "http://google.com/maps/place/SEWA+Shakti+Kendra,+Daru/@24.0078972,85.4938565,17z/data=!3m1!4b1!4m6!3m5!1s0x39f483f5053682a7:0xcc5caca3c258c166!8m2!3d24.0078923!4d85.4964314!16s%2Fg%2F11vx4px7k9?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.8976218,
+          25.0777387
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Malda",
+        "state": "West Bengal",
+        "district": "Malda",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Malda/@25.0777435,87.8950469,17z/data=!3m1!4b1!4m6!3m5!1s0x39faf3d5665e2cb7:0x84bc413af0f2fc7b!8m2!3d25.0777387!4d87.8976218!16s%2Fg%2F11y51lmwvb?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.5961779,
+          24.198859
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Raghunathganj",
+        "state": "West Bengal",
+        "district": "Murshidabad",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Raghunathganj/@24.1988639,88.593603,17z/data=!3m1!4b1!4m6!3m5!1s0x39fbe36013c8cb4b:0xd256c0ab80f0ab47!8m2!3d24.198859!4d88.5961779!16s%2Fg%2F11w3zqlc77?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.2565574,
+          24.4222774
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Lalgola",
+        "state": "West Bengal",
+        "district": "Murshidabad",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Lalgola/@24.4222823,88.2539825,17z/data=!3m1!4b1!4m6!3m5!1s0x39fbc93b1cdd718b:0xbbdf4ea383144f48!8m2!3d24.4222774!4d88.2565574!16s%2Fg%2F11ks6kbyph?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.2626909,
+          24.0872214
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Berhampore",
+        "state": "West Bengal",
+        "district": "Murshidabad",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Berhampore/@24.0872263,88.260116,17z/data=!3m1!4b1!4m6!3m5!1s0x39f97dcc0b140527:0xb503d10885b61be8!8m2!3d24.0872214!4d88.2626909!16s%2Fg%2F11ks8t_rfv?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5151679,
+          29.5656369
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Kakrighat",
+        "state": "Uttarakhand",
+        "district": "Almora",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Kakrighat/@29.5656415,79.512593,17z/data=!3m1!4b1!4m6!3m5!1s0x39a0af969725246d:0x3075ff3868e9fbdd!8m2!3d29.5656369!4d79.5151679!16s%2Fg%2F11v_5gh3ks?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.017048,
+          30.3199992
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Dehradun",
+        "state": "Uttarakhand",
+        "district": "Dehradun",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Dehradun/@30.3200038,78.0144731,17z/data=!3m1!4b1!4m6!3m5!1s0x39092b93e6190a5f:0x78f6b199faad2170!8m2!3d30.3199992!4d78.017048!16s%2Fg%2F11pkkppbj1?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1322744,
+          30.418142
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Rudraprayag",
+        "state": "Uttarakhand",
+        "district": "Rudraprayag",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Rudraprayag/@30.4181466,79.1296995,17z/data=!3m1!4b1!4m6!3m5!1s0x3909cd6b23722317:0xd7fa794aca8c97f7!8m2!3d30.418142!4d79.1322744!16s%2Fg%2F11pkkpgw8z?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.1057848,
+          25.6684955
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Kohima",
+        "state": "Nagaland",
+        "district": "Kohima",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Kohima/@25.6684955,94.103403,18z/data=!4m10!1m2!2m1!1sSEWA+Shakti+Kendra+Kohima!3m6!1s0x37462141c158eee1:0xf49590cdc0842720!8m2!3d25.6684955!4d94.1057848!15sChlTRVdBIFNoYWt0aSBLZW5kcmEgS29oaW1hkgEVc29jaWFsX3dlbGZhcmVfY2VudGVyqgFpCg0vZy8xMXdmbDZ4Ymd3EAEqFiISc2V3YSBzaGFrdGkga2VuZHJhKAAyHxABIhuDqHB9dsYcIkbKLl24cW2ZRmB7jGWEFN2GirkyHRACIhlzZXdhIHNoYWt0aSBrZW5kcmEga29oaW1h4AEA!16s%2Fg%2F11wfl6xbgw?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.2986394,
+          25.5701573
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Pfutsero Nagaland",
+        "state": "Nagaland",
+        "district": "Phek",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Pfutsero+Nagaland/@25.5701621,94.2937685,17z/data=!3m1!4b1!4m6!3m5!1s0x374883c689df0d2d:0x5b44448f13b17946!8m2!3d25.5701573!4d94.2986394!16s%2Fg%2F11rmym_m7_?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.8742945,
+          26.0714407
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendra Shamator",
+        "state": "Nagaland",
+        "district": "Shamator",
+        "accuracy": "exact",
+        "link": "https://www.google.com/maps/place/SEWA+Shakti+Kendra+Shamator/@26.0714455,94.8717196,17z/data=!3m1!4b1!4m6!3m5!1s0x3747915ebf0b12d1:0x7288fcff76bbb82e!8m2!3d26.0714407!4d94.8742945!16s%2Fg%2F11vx3ws893?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+        "approx_reason": "",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1376,
+          25.5941
+        ]
+      },
+      "properties": {
+        "name": "SEWA Shakti Kendras (Bihar) — link pending",
+        "state": "Bihar",
+        "district": "",
+        "accuracy": "approx_state",
+        "link": "https://share.google/7yA9sklLzNxHnstBt",
+        "approx_reason": "Shared short link; exact pin(s) pending. This is a placeholder at Patna.",
+        "pdf": "",
+        "image_page": "",
+        "docs": []
+      }
+    }
+  ]
+}
