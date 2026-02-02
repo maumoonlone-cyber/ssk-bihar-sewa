@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>SSK Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root { --sewa: #93192e; }
+    body { margin: 0; font-family: system-ui, -apple-system, Arial, sans-serif; }
+    #topbar { padding: 10px 12px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    #map { height: calc(100vh - 72px); }
+    input, select, button { padding: 8px 10px; }
+    .meta { margin-left: auto; opacity: .75; font-size: 14px; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; border:1px solid rgba(0,0,0,.35); }
+    .small { font-size: 12px; opacity: .8; }
+
+    /* Popup styling: make the title/links in SEWA maroon */
+    .leaflet-popup-content b { color: var(--sewa); }
+    .leaflet-popup-content a { color: var(--sewa); }
+    .leaflet-popup-content a:hover { opacity: .85; }
+  </style>
+</head>
+<body>
+  <div id="topbar">
+    <strong>SSK Locations</strong>
+
+    <select id="stateSelect" title="State">
+      <option value="">All states</option>
+    </select>
+
+    <select id="districtSelect" title="District">
+      <option value="">All districts</option>
+    </select>
+
+    <select id="sskSelect" title="SSK">
+      <option value="">Select SSK</option>
+    </select>
+
+    <input id="q" placeholder="Search name / district / state..." />
+
+    <select id="accuracyFilter" title="Accuracy">
+      <option value="">All accuracy</option>
+      <option value="exact">Exact</option>
+      <option value="approx_district">Approx (district)</option>
+      <option value="approx_state">Approx (state)</option>
+      <option value="missing_link">Missing link</option>
+    </select>
+
+    <button id="exportBtn" title="Download current data as GeoJSON">Export GeoJSON</button>
+
+    <div class="meta" id="count"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+
+  <script>
+    // --- Cleaner base map: no clutter labels + big place labels overlay ---
+    const baseNoLabels = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+    });
+
+    const labelsOnly = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png", {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+    });
+
+    const map = L.map("map", { layers: [baseNoLabels, labelsOnly] }).setView([22.5, 78.9], 5);
+
+    // Keep Delhi labels visible when zoomed in (no need to click each pin)
+    map.on("zoomend", updateDelhiAutoLabels);
+    map.on("moveend", updateDelhiAutoLabels);
+
+    // --- Boundaries overlays ---
+    // States where SEWA is working (used for transparent highlight overlay)
+    const SEWA_STATES = new Set([
+      "Bihar","Delhi","NCT of Delhi","Jharkhand","West Bengal","Punjab","Rajasthan","Uttarakhand","Nagaland"
+    ]);
+    const norm = (s) => String(s||"").trim().toLowerCase();
+
+    // Draw bold state borders + transparent SEWA-state overlay
+    fetch("https://gramener.com/cartogram/maps/india-states.json")
+      .then(r => r.json())
+      .then(topo => {
+        const objName = Object.keys(topo.objects)[0];
+        const gj = topojson.feature(topo, topo.objects[objName]);
+
+        // State borders (more defined)
+        L.geoJSON(gj, { style: { weight: 3.4, opacity: 0.95, fillOpacity: 0 } }).addTo(map);
+
+        // SEWA state highlight overlay (transparent maroon)
+        const highlight = {
+          type: "FeatureCollection",
+          features: (gj.features || []).filter(f => {
+            const n = norm(f.properties?.name || f.properties?.st_nm || f.properties?.STATE || "");
+            return [...SEWA_STATES].some(s => n === norm(s));
+          })
+        };
+
+        L.geoJSON(highlight, {
+          style: { weight: 1.8, opacity: 0.95, fillOpacity: 0.10, color: "#93192e", fillColor: "#93192e" }
+        }).addTo(map);
+      })
+      .catch(err => console.warn("State overlay failed to load:", err));
+
+    // India outline (country boundary) — highlighted
+    fetch("https://raw.githubusercontent.com/datameet/maps/master/Country/india.geojson")
+      .then(r => r.json())
+      .then(gj => {
+        L.geoJSON(gj, { style: { weight: 3.2, opacity: 0.95, fillOpacity: 0, color: "#93192e" } }).addTo(map);
+      })
+      .catch(err => console.warn("India outline failed to load:", err));
+
+    let all = [];
+    let markerById = new Map();
+    const markers = L.layerGroup().addTo(map);
+
+    // Show Delhi SSK labels automatically at higher zoom (so you don't need to click each pin)
+    const DELHI_LABEL_ZOOM = 12; // adjust if you want labels earlier/later
+    const delhiLabelMarkers = []; // { marker, name }
+
+    function badge(text) { return `<span class="badge">${text}</span>`; }
+
+    function markerFor(feature) {
+      const p = feature.properties || {};
+      const [lng, lat] = feature.geometry.coordinates;
+      const acc = p.accuracy || "exact";
+
+      const radius = acc === "exact" ? 7 : (acc === "approx_district" ? 9 : 11);
+
+      // Exact pins: SEWA maroon. Approximations: lighter/transparent maroon.
+      const isApprox = acc !== "exact";
+      const stroke = "#93192e";
+      const fill = "#93192e";
+      const fillOpacity = isApprox ? 0.25 : 0.65;
+
+      const opts = { radius, weight: 2, color: stroke, fillColor: fill, fillOpacity };
+      return L.circleMarker([lat, lng], opts);
+    }
+
+    function featureId(f, idx) {
+      const p = f.properties || {};
+      const [lng, lat] = (f.geometry && f.geometry.coordinates) ? f.geometry.coordinates : ["",""];
+      return `${idx}::${p.name || ""}::${lat}::${lng}`;
+    }
+
+    function uniqueSorted(arr) {
+      return [...new Set(arr.map(x => (x || "").trim()).filter(Boolean))].sort((a,b) => a.localeCompare(b));
+    }
+
+    function populateStateSelect(features) {
+      const sel = document.getElementById("stateSelect");
+      const states = uniqueSorted(features.map(f => f.properties?.state));
+      sel.innerHTML = '<option value="">All states</option>';
+      states.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s; opt.textContent = s;
+        sel.appendChild(opt);
+      });
+    }
+
+    function populateDistrictSelect(features, state) {
+      const sel = document.getElementById("districtSelect");
+      const districts = uniqueSorted(
+        features.filter(f => !state || (f.properties?.state || "") === state)
+                .map(f => f.properties?.district)
+      );
+      sel.innerHTML = '<option value="">All districts</option>';
+      districts.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d; opt.textContent = d;
+        sel.appendChild(opt);
+      });
+    }
+
+    function populateSskSelect(features, state, district) {
+      const sel = document.getElementById("sskSelect");
+      sel.innerHTML = '<option value="">Select SSK</option>';
+
+      const ssks = features
+        .filter(f => !state || (f.properties?.state || "") === state)
+        .filter(f => !district || (f.properties?.district || "") === district)
+        .map((f, idx) => ({ f, idx }))
+        .sort((a,b) => (a.f.properties?.name || "").localeCompare(b.f.properties?.name || ""));
+
+      ssks.forEach(({f, idx}) => {
+        const id = featureId(f, idx);
+        const opt = document.createElement("option");
+        opt.value = id;
+        opt.textContent = f.properties?.name || "SSK";
+        sel.appendChild(opt);
+      });
+    }
+
+    function render(features) {
+      markers.clearLayers();
+      markerById = new Map();
+
+      features.forEach((f, idx) => {
+        const p = f.properties || {};
+        const acc = p.accuracy || "exact";
+        const id = featureId(f, idx);
+
+        const pdfLink = p.pdf ? `<div style="margin-top:6px;"><a href="${p.pdf}" target="_blank" rel="noreferrer">Open PDF</a></div>` : "";
+        const pageLink = p.image_page ? `<div style="margin-top:6px;"><a href="${p.image_page}" target="_blank" rel="noreferrer">Open page</a></div>` : "";
+
+        // Google Drive / web PDFs per pin (dropdown)
+        const docs = Array.isArray(p.docs) ? p.docs : [];
+        const safe = (s) => String(s || "").replaceAll('"', "&quot;");
+        const docsDropdown = docs.length ? `
+          <div style="margin-top:10px;">
+            <div class="small"><b>Documents</b></div>
+            <select id="doc-${id}" style="margin-top:4px; width: 100%;">
+              ${docs.map((d, i) => `<option value="${safe(d.url)}">${safe(d.label || ("Document " + (i+1)))}</option>`).join("")}
+            </select>
+            <button style="margin-top:6px;" onclick="
+              (function(){
+                const sel = document.getElementById('doc-${id}');
+                if(sel && sel.value) window.open(sel.value, '_blank');
+              })();
+            ">Open</button>
+          </div>
+        ` : "";
+
+        const popup = `
+          <div style="min-width:260px">
+            <div><b>${p.name || "SSK"}</b></div>
+            <div style="margin:6px 0;">
+              ${(p.district || "")}${p.state ? `, ${p.state}` : ""}
+            </div>
+            <div style="margin:6px 0;">${acc ? badge(acc) : ""}</div>
+
+            ${p.link ? `<div style="margin-top:6px;"><a href="${p.link}" target="_blank" rel="noreferrer">Open Google Maps</a></div>` : ""}
+            ${pdfLink}
+            ${pageLink}
+            ${docsDropdown}
+            ${p.approx_reason ? `<div style="margin-top:8px;" class="small">${p.approx_reason}</div>` : ""}
+          </div>
+        `;
+
+        const m = markerFor(f).bindPopup(popup).addTo(markers);
+
+        // Delhi: attach a tooltip (label) that can be made visible automatically when zoomed in
+        if ((p.state || "") === "Delhi") {
+          m.bindTooltip(p.name || "SSK", {
+            direction: "top",
+            offset: [0, -10],
+            opacity: 0.95,
+            permanent: false
+          });
+          delhiLabelMarkers.push({ marker: m, name: (p.name || "SSK") });
+        }
+
+        markerById.set(id, { marker: m, feature: f });
+      });
+
+      document.getElementById("count").textContent = `${features.length} shown (of ${all.length})`;
+    }
+
+    function updateDelhiAutoLabels() {
+      const z = map.getZoom();
+      const stateSelected = document.getElementById("stateSelect")?.value || "";
+      const show = (z >= DELHI_LABEL_ZOOM) && (stateSelected === "" || stateSelected === "Delhi" || stateSelected === "NCT of Delhi");
+      delhiLabelMarkers.forEach(obj => {
+        const m = obj.marker;
+        if (!m.getTooltip()) return;
+        if (show) m.openTooltip();
+        else m.closeTooltip();
+      });
+    }
+
+    function applyFilters() {
+      const q = document.getElementById("q").value.trim().toLowerCase();
+      const st = document.getElementById("stateSelect").value;
+      const dist = document.getElementById("districtSelect").value;
+      const acc = document.getElementById("accuracyFilter").value;
+
+      const filtered = all
+        .filter(f => !st || (f.properties?.state || "") === st)
+        .filter(f => !dist || (f.properties?.district || "") === dist)
+        .filter(f => !acc || (f.properties?.accuracy || "exact") === acc)
+        .filter(f => {
+          if (!q) return true;
+          const p = f.properties || {};
+          return (p.name || "").toLowerCase().includes(q) ||
+                 (p.district || "").toLowerCase().includes(q) ||
+                 (p.state || "").toLowerCase().includes(q);
+        });
+
+      populateDistrictSelect(all, st);
+      const distSel = document.getElementById("districtSelect");
+      if (dist && ![...distSel.options].some(o => o.value === dist)) distSel.value = "";
+
+      populateSskSelect(all, st, distSel.value);
+      render(filtered);
+      updateDelhiAutoLabels();
+    }
+
+    document.getElementById("q").addEventListener("input", applyFilters);
+    document.getElementById("accuracyFilter").addEventListener("change", applyFilters);
+
+    document.getElementById("stateSelect").addEventListener("change", () => {
+      document.getElementById("districtSelect").value = "";
+      applyFilters();
+    });
+
+    document.getElementById("districtSelect").addEventListener("change", applyFilters);
+
+    document.getElementById("sskSelect").addEventListener("change", (e) => {
+      const id = e.target.value;
+      if (!id) return;
+      const obj = markerById.get(id);
+      if (!obj) return;
+      const f = obj.feature;
+      const [lng, lat] = f.geometry.coordinates;
+      map.setView([lat, lng], 15);
+      obj.marker.openPopup();
+    });
+
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const data = { type: "FeatureCollection", features: all };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/geo+json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "ssk.geojson";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    fetch("./ssk.geojson")
+      .then(r => {
+        if (!r.ok) throw new Error("Could not load ssk.geojson");
+        return r.json();
+      })
+      .then(data => {
+        all = data.features || [];
+        populateStateSelect(all);
+        populateDistrictSelect(all, "");
+        populateSskSelect(all, "", "");
+        render(all);
+        updateDelhiAutoLabels();
+        if (all.length) map.fitBounds(L.geoJSON(data).getBounds().pad(0.15));
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Error loading SSK data. Ensure ssk.geojson is present and valid.");
+      });
+  </script>
+</body>
+</html>
