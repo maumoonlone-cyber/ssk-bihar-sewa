@@ -111,15 +111,16 @@
         // Draw all state borders lightly (for context)
         L.geoJSON(gj, { style: { weight: 1, opacity: 0.3, fillOpacity: 0, color: "#999" } }).addTo(map);
 
-        // SEWA state borders - BOLD and defined
-        L.geoJSON(sewaStates, { 
-          style: { weight: 8, opacity: 1, fillOpacity: 0, color: "#93192e" } 
-        }).addTo(map);
-
-        // SEWA state highlight overlay (transparent maroon fill)
-        L.geoJSON(sewaStates, {
-          style: { weight: 0, opacity: 0, fillOpacity: 0.40, fillColor: "#93192e" }
-        }).addTo(map);
+        // SEWA state borders AND fill - combined
+L.geoJSON(sewaStates, { 
+  style: { 
+    weight: 8, 
+    opacity: 1, 
+    color: "#93192e",
+    fillOpacity: 0.25, 
+    fillColor: "#93192e" 
+  } 
+}).addTo(map);
       })
       .catch(err => console.warn("State overlay failed to load:", err));
 
