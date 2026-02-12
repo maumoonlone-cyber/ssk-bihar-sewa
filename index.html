@@ -118,7 +118,7 @@
 
         // SEWA state highlight overlay (transparent maroon fill)
         L.geoJSON(sewaStates, {
-          style: { weight: 0, opacity: 0, fillOpacity: 0.12, fillColor: "#93192e" }
+          style: { weight: 0, opacity: 0, fillOpacity: 0.40, fillColor: "#93192e" }
         }).addTo(map);
       })
       .catch(err => console.warn("State overlay failed to load:", err));
